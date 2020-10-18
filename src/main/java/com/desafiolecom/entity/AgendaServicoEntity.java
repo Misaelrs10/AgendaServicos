@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name="tb_agendaservico")
 public class AgendaServicoEntity implements Serializable {
@@ -33,16 +35,19 @@ public class AgendaServicoEntity implements Serializable {
 	@JoinColumn(name="id_servico", referencedColumnName = "id_servico")
     private ServicoEntity servico;
    
-    @Column(name = "totalservico")
+    @Column(name = "totalServico")
     private double totalServico;
     
-    @Column(name = "datainicio")
+    @Column(name = "dataInicio")
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date dataInicio;
     
     @Column(name = "dataTermino")
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date dataTermino;
     
     @Column(name = "dataPrevisao")
+    @JsonFormat(pattern="dd-MM-yyyy")
     private Date dataPrevisao;
 
 	public Long getId() {
