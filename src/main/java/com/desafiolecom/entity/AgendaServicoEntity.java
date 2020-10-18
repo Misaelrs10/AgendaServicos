@@ -34,13 +34,16 @@ public class AgendaServicoEntity implements Serializable {
     private ServicoEntity servico;
    
     @Column(name = "totalservico")
-    private BigDecimal totalServico;
+    private double totalServico;
     
     @Column(name = "datainicio")
     private Date dataInicio;
     
     @Column(name = "dataTermino")
     private Date dataTermino;
+    
+    @Column(name = "dataPrevisao")
+    private Date dataPrevisao;
 
 	public Long getId() {
 		return id;
@@ -66,17 +69,16 @@ public class AgendaServicoEntity implements Serializable {
 		this.servico = servico;
 	}
 	
-	public BigDecimal getTotalServico() {
-		/*if(getCliente().getTipoCliente().equals("Ouro")) {
-			totalServico = getServico().getValor().subtract((getServico().getValor().multiply(BigDecimal.valueOf(0.1))));
-		}else if (getCliente().getTipoCliente().equals("Prata")){
-			totalServico = getServico().getValor().subtract((getServico().getValor().multiply(BigDecimal.valueOf(0.05))));
+	public double getTotalServico(double total) {
+		if(getCliente().getTipoCliente().equals("Ouro")) {
+			total = getServico().getValor() - (getServico().getValor() * 0.1);
+		}else if(getCliente().getTipoCliente().equals("Prata")) {
+			total = getServico().getValor() - (getServico().getValor() * 0.05);
 		}
-		return totalServico = getServico().getValor();*/
 		return totalServico;
 	}
 
-	public void setTotalServico(BigDecimal totalServico) {
+	public void setTotalServico(double totalServico) {
 		this.totalServico = totalServico;
 	}
 
@@ -96,4 +98,12 @@ public class AgendaServicoEntity implements Serializable {
 		this.dataTermino = dataTermino;
 	}
 
+	public Date getDataPrevisao() {
+		return dataPrevisao;
+	}
+
+	public void setDataPrevisao(Date dataPrevisao) {
+		this.dataPrevisao = dataPrevisao;
+	}
+	
 }

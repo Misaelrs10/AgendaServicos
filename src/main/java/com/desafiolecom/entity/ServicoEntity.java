@@ -25,7 +25,7 @@ public class ServicoEntity implements Serializable {
 	private String nome;
 	
 	@Column(name = "valor")
-	private BigDecimal valor;
+	private double valor;
 	
 	public Long getId() {
 		return id;
@@ -43,11 +43,11 @@ public class ServicoEntity implements Serializable {
 		this.nome = nome;
 	}
 
-	public BigDecimal getValor() {
+	public double getValor() {
 		return valor;
 	}
 
-	public void setValor(BigDecimal valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 		

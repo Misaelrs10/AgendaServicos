@@ -61,6 +61,7 @@ public class AgendaServicoController {
         	agendaServico.setCliente(newAgendaServico.getCliente());
         	agendaServico.setDataInicio(newAgendaServico.getDataInicio());
         	agendaServico.setDataTermino(newAgendaServico.getDataTermino());
+        	agendaServico.setDataPrevisao(newAgendaServico.getDataPrevisao());
         	agendaServico.setServico(newAgendaServico.getServico());
         	servicoRepository.save(agendaServico);
             return new ResponseEntity<AgendaServicoEntity>(agendaServico, HttpStatus.OK);

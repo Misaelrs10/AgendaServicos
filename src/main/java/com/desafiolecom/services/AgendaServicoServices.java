@@ -30,6 +30,7 @@ public class AgendaServicoServices {
 		agendaServico.setTotalServico(agendaServicoDto.getTotalServico());
 		agendaServico.setDataInicio(agendaServicoDto.getDataInicio());
 		agendaServico.setDataTermino(agendaServicoDto.getDataTermino());
+		agendaServico.setDataPrevisao(agendaServicoDto.getDataPrevisao());
 		return agendaServicoRepository.save(agendaServico);
 	}
 

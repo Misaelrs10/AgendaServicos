@@ -17,11 +17,13 @@ public class AgendaServicoDto implements Serializable{
 	
 	private ServicoEntity servico;
 	
-	private BigDecimal totalServico;
+	private double totalServico;
 	
 	private Date dataInicio;
 	
 	private Date dataTermino;
+	
+	private Date dataPrevisao;
 
 	public Long getId() {
 		return id;
@@ -47,11 +49,11 @@ public class AgendaServicoDto implements Serializable{
 		this.servico = servico;
 	}
 	
-	public BigDecimal getTotalServico() {
+	public double getTotalServico() {
 		return totalServico;
 	}
 
-	public void setTotalServico(BigDecimal totalServico) {
+	public void setTotalServico(double totalServico) {
 		this.totalServico = totalServico;
 	}
 
@@ -70,5 +72,13 @@ public class AgendaServicoDto implements Serializable{
 	public void setDataTermino(Date dataTermino) {
 		this.dataTermino = dataTermino;
 	}
-	
+
+	public Date getDataPrevisao() {
+		return dataPrevisao;
+	}
+
+	public void setDataPrevisao(Date dataPrevisao) {
+		this.dataPrevisao = dataPrevisao;
+	}
+		
 }
