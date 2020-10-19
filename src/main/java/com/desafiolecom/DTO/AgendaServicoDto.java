@@ -50,6 +50,11 @@ public class AgendaServicoDto implements Serializable{
 	}
 	
 	public double getTotalServico() {
+		if(getCliente().getTipoCliente().equals("Ouro")) {
+			totalServico = getServico().getValor() - (getServico().getValor() * 0.1);
+		}else if(getCliente().getTipoCliente().equals("Prata")) {
+			totalServico = getServico().getValor() - (getServico().getValor() * 0.05);
+		}
 		return totalServico;
 	}
 

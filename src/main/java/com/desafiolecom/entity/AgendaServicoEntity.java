@@ -74,12 +74,7 @@ public class AgendaServicoEntity implements Serializable {
 		this.servico = servico;
 	}
 	
-	public double getTotalServico(double total) {
-		if(getCliente().getTipoCliente().equals("Ouro")) {
-			total = getServico().getValor() - (getServico().getValor() * 0.1);
-		}else if(getCliente().getTipoCliente().equals("Prata")) {
-			total = getServico().getValor() - (getServico().getValor() * 0.05);
-		}
+	public double getTotalServico(){
 		return totalServico;
 	}
 

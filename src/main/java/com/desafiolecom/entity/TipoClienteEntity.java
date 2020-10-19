@@ -22,6 +22,9 @@ public class TipoClienteEntity implements Serializable {
 
 	@Column(name = "tipocliente")
 	private String tipoCliente;
+	
+	@Column(name = "valordesconto")
+	private Integer valorDesconto;
 
 	public Long getId() {
 		return id;
@@ -38,5 +41,13 @@ public class TipoClienteEntity implements Serializable {
 	public void setTipoCliente(String tipoCliente) {
 		this.tipoCliente = tipoCliente;
 	}
-			
+
+	public Integer getValorDesconto() {
+		return valorDesconto;
+	}
+
+	public void setValorDesconto(Integer valorDesconto) {
+		this.valorDesconto = valorDesconto;
+	}
+				
 }

@@ -25,6 +25,7 @@ public class TipoClienteServices {
 
 		tipoCliente.setId(tipoClienteDto.getId());
 		tipoCliente.setTipoCliente(tipoClienteDto.getTipoCliente());
+		tipoCliente.setValorDesconto(tipoClienteDto.getValorDesconto());
 		return tipoClienteRepository.save(tipoCliente);
 	}
 

@@ -9,6 +9,8 @@ public class TipoClienteDto implements Serializable{
 	private Long id;
 	
 	private String tipoCliente;
+	
+	private Integer valorDesconto;
 
 	public Long getId() {
 		return id;
@@ -26,4 +28,12 @@ public class TipoClienteDto implements Serializable{
 		this.tipoCliente = tipoCliente;
 	}
 
+	public Integer getValorDesconto() {
+		return valorDesconto;
+	}
+
+	public void setValorDesconto(Integer valorDesconto) {
+		this.valorDesconto = valorDesconto;
+	}
+	
 }

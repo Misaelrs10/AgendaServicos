@@ -59,6 +59,7 @@ public class TipoClienteController {
         if(oldTipoCliente.isPresent()){
         	TipoClienteEntity tipoCliente = oldTipoCliente.get();
         	tipoCliente.setTipoCliente(newTipoCliente.getTipoCliente());
+        	tipoCliente.setValorDesconto(newTipoCliente.getValorDesconto());
         	tipoClienteRepository.save(tipoCliente);
             return new ResponseEntity<TipoClienteEntity>(tipoCliente, HttpStatus.OK);
         }
