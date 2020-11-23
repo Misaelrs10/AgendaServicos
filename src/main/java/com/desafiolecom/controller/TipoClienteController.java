@@ -1,4 +1,4 @@
-package com.desafiolecom.Controller;
+package com.desafiolecom.controller;
 
 import java.util.List;
 import java.util.Optional;
